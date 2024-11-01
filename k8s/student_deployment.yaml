@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: student-service
-        image: ameygawade/student-service:latest
+        image: adeel271/student-service:latest
         ports:
         - containerPort: 3000
         env:

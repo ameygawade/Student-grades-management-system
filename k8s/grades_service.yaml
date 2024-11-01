@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: grades-service
-        image: ameygawade/grades-service:latest   # Replace with your actual image
+        image: adeel271/grades-service:latest   # Replace with your actual image
         ports:
         - containerPort: 3001
         env:

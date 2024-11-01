@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: subject-service
-        image: ameygawade/subject-service:latest
+        image: adeel271/subject-service:latest
         ports:
         - containerPort: 3002
         env:
