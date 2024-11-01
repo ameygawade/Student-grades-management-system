@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: subject-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: subject-service
+  template:
+    metadata:
+      labels:
+        app: subject-service
+    spec:
+      containers:
+      - name: subject-service
+        image: ameygawade/subject-service:latest
+        ports:
+        - containerPort: 3002
+        env:
+          - name: MONGO_URI
+            value: "mongodb://mongo:27017/subject_db"  # URI pointing to MongoDB service

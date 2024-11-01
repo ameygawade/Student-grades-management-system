@@ -1,0 +1,20 @@
+{
+    "name": "grades-service",
+    "version": "1.0.0",
+    "description": "A microservice for managing grades in the Student Grading System.",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js",
+      "dev": "nodemon server.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      "mongoose": "^6.11.4"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.22"
+    },
+    "author": "MUHAMMAD ADEEL",
+    "license": "ISC"
+  }
+  

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grades-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: grades-service
+  template:
+    metadata:
+      labels:
+        app: grades-service
+    spec:
+      containers:
+      - name: grades-service
+        image: ameygawade/grades-service:latest
+        ports:
+        - containerPort: 3001
