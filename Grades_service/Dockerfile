@@ -8,6 +8,9 @@ WORKDIR /app
 COPY package.json .
 RUN npm install
 
+# Optional: Install dotenv if you need it
+RUN npm install dotenv
+
 # Copy application code
 COPY . .
 

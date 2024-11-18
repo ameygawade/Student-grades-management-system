@@ -14,9 +14,14 @@ spec:
     spec:
       containers:
       - name: subject-service
-        image: adeel271/subject-service:latest
+        image: ameygawade/subject-service:latest
         ports:
         - containerPort: 3002
         env:
-          - name: MONGO_URI
-            value: "mongodb://mongo:27017/subject_db"  # URI pointing to MongoDB service
+        - name: MONGO_URI
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-secret
+              key: mongo-uri
+        - name: STUDENT_SERVICE_URL
+          value: http://student-service

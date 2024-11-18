@@ -14,9 +14,12 @@ spec:
     spec:
       containers:
       - name: student-service
-        image: adeel271/student-service:latest
+        image: ameygawade/student-service:latest
         ports:
         - containerPort: 3000
         env:
-          - name: MONGO_URI
-            value: "mongodb://mongo:27017/student_db"  # URI pointing to MongoDB service
+        - name: MONGO_URI
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-secret
+              key: mongo-uri

@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: student-service
 spec:
-  type: LoadBalancer
   selector:
     app: student-service
   ports:
     - protocol: TCP
       port: 80
       targetPort: 3000
+  type: ClusterIP

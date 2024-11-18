@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: subject-service
 spec:
-  type: LoadBalancer
   selector:
     app: subject-service
   ports:
     - protocol: TCP
       port: 80
       targetPort: 3002
+  type: ClusterIP
